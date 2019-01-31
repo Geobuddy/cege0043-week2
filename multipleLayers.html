@@ -8,7 +8,7 @@ crossorigin=""></script>
 <!-- the following CSS is used to set the size of the Map --> <style type="text/css">
 #mapid { height: 180px; } </style>
 
-// Load data method
+<!--Load data method -->
 <script >
 function loadEarthquakeData() {
 // call the getEarthquakes code
@@ -20,6 +20,7 @@ getEarthquakes();
 // create a variable that will hold the XMLHttpRequest() - this must be done outside a function so
 that all the functions can use the same variable
 var client;
+
 // create the code to get the Earthquakes data using an XMLHttpRequest
 function getEarthquakes() {
 client = new XMLHttpRequest();
@@ -27,6 +28,7 @@ client.open('GET','https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all
 client.onreadystatechange = earthquakeResponse; // note don't use earthquakeResponse() with brackets as that doesn't work
 client.send();
 }
+
 // create the code to wait for the response from the data server, and process the response once it is
 received
 function earthquakeResponse() {
@@ -37,6 +39,7 @@ var earthquakedata = client.responseText;
 loadEarthquakelayer(earthquakedata);
 }
 }
+
 // convert the received data - which is text - to JSON format and add it to the map
 function loadEarthquakelayer(earthquakedata) {
 // convert the text to JSON
