@@ -27,6 +27,18 @@ function removeEarthquakeData() {
 alert("Earthquake data will be removed");
 mymap.removeLayer( earthquakelayer );
 }
+
+function loadBusstopsData() {
+// call the getEarthquakes code
+// keep the alert message so that we know something is happening
+alert("Loading loadBusstop");
+}
+
+function removeBusstopsData() {
+// call the getEarthquakes code
+// keep the alert message so that we know something is happening
+alert("Remove Busstop");
+}
 // create a variable that will hold the XMLHttpRequest() - this must be done outside a function so that all the functions can use the same variable
 var client;
 // create the code to get the Earthquakes data using an XMLHttpRequest
@@ -69,6 +81,13 @@ data </button>
 
 <button id="removeEarthquakeData" name="removeEarthquakeData"
 onclick="removeEarthquakeData()">Click here to remove the Earthquake data </button>
+<div></div>
+
+<button id="loadBusstopData" name="loadBusstopsData" onclick="loadBusstopsData()">Click here to load the
+Bustops data </button>
+
+<button id="removeBusstopsData" name="removeBusstopsData"
+onclick="removeBusstopsData()">Click here to remove the Bustops data </button>
 
 <script>
 // load the map
