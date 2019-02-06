@@ -28,7 +28,7 @@ if (layername =="earthquakes") {
 url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson"
 }
 if (layername == "busstops") {
-url = "https://github.com/Geobuddy/cege0043-week2/blob/master/busstops.geojson"
+url = "https://developer.cege.ucl.ac.uk:31106/cege0043-week2/busstops.geojson"
 }
 client.open('GET',url);
 client.onreadystatechange = dataResponse;
@@ -100,8 +100,7 @@ mymap.removeLayer( busstoplayer );
 <!-- the following script will load the map and set the default view and zoom, as well as loading the
 basemap tiles -->
 
-<button id="loadEarthquakeData" name="loadEarthquakeData" onclick="loadEarthquakeData()">Click here to load the
-data </button>
+<button id="loadEarthquakeData" name="loadEarthquakeData" onclick="loadEarthquakeData()">Click here to load the data </button>
 
 <button id="removeEarthquakeData" name="removeEarthquakeData"
 onclick="removeEarthquakeData()">Click here to remove the Earthquake data </button>
