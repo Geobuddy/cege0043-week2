@@ -61,8 +61,7 @@ client.open('GET',url);
 client.onreadystatechange = dataResponse;
 client.send();
 }
-// create the code to wait for the response from the data server, and process the response once it is
-received
+// create the code to wait for the response from the data server, and process the response once it is received
 function dataResponse() {
 // this function listens out for the server to say that the data is ready - i.e. has state 4
 if (client.readyState == 4) {
@@ -100,18 +99,16 @@ mymap.fitBounds(busstoplayer.getBounds());
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <!-- the following script will load the map and set the default view and zoom, as well as loading the
 basemap tiles -->
-<div>
 
 <button id="loadData" name="loadData" onclick="loadEarthquakeData()">Click here to load the
 data </button>
 
-
 <button id="removeEarthquakeData" name="removeEarthquakeData"
 onclick="removeEarthquakeData()">Click here to remove the Earthquake data </button>
 
-</div>
 
-<div>
+
+<div></div>
 
 <button id="loadBusstops" name="loadBusstops" onclick="loadBusstopsData()">Click here to load the
 Bustops data </button>
@@ -119,7 +116,6 @@ Bustops data </button>
 <button id="removeBusstopsData" name="removeBusstopsData"
 onclick="removeBusstopsData()">Click here to remove the Bustops data </button>
 
-</div>
 
 <script>
 // load the map
@@ -129,6 +125,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
 '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,' +'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 id: 'mapbox.streets'}).addTo(mymap);
+
 </script>
 </body>
 </html>
