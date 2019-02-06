@@ -14,6 +14,9 @@ crossorigin=""></script>
 </style>
 
 <script >
+var busstoplayer;
+var earthquakelayer;
+
 function loadEarthquakeData() {
 // call the getEarthquakes code
 // keep the alert message so that we know something is happening
@@ -22,7 +25,7 @@ getData('earthquakes');
 }
 // make sure that there is a variable for the earthquake layer to be referenced by
 // this should be GLOBAL – i.e. not inside a function – so that any code can see the variable
-var earthquakelayer;
+
 function removeEarthquakeData() {
 alert("Earthquake data will be removed");
 mymap.removeLayer( earthquakelayer );
@@ -35,7 +38,6 @@ alert("Loading Busstop");
 getData('busstops');
 }
 
-var busstoplayer;
 function removeBusstopsData() {
 alert("Remove Busstop");
 mymap.removeLayer( busstoplayer );
@@ -111,7 +113,7 @@ onclick="removeEarthquakeData()">Click here to remove the Earthquake data </butt
 
 <div>
 
-<button id="loadBusstopData" name="loadBusstopsData" onclick="loadBusstopsData()">Click here to load the
+<button id="loadBusstops" name="loadBusstops" onclick="loadBusstopsData()">Click here to load the
 Bustops data </button>
 
 <button id="removeBusstopsData" name="removeBusstopsData"
