@@ -70,7 +70,7 @@ var loadingBusstops = true;
 var json = JSON.parse(geoJSONData);
 // add the JSON layer onto the map - it will appear using the default icons
 if (loadingEarthquakes === true){
-eearthquakelayer = L.geoJson(earthquakejson,
+eearthquakelayer = L.geoJson(geoJSONData,
 {
 		//use point to layer to create the points
 		pointToLayer: function (feature,latlng)
